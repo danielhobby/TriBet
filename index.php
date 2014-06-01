@@ -16,15 +16,23 @@ and open the template in the editor.
         <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
         
         <script>
+            
+            
             $(document).ready(function()
             {
                 $("#login-area").hide();
-                
                 
                 $("#login").click(function()
                 {
                     $("#login-area").show();
                     $("#login").hide();
+                    $("#login-text").hide();
+                    $("#register").hide();
+                });
+                
+                $("#register").click(function()
+                {
+                    location.href='register.php';
                 });
             });
         </script>

@@ -39,22 +39,14 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM users");
+$result = mysqli_query($con, "SELECT * FROM users");
 
 if (checkUser($result, $username, $password))
 {
     $_SESSION['login'] = "TRUE";
 }
-else 
-{
-    echo sha1("Test" . "Cheese");
-}
 
 mysqli_close($con);
 
 
-
-
-
 header("Location: ../index.php");
-
