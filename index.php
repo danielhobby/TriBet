@@ -12,10 +12,27 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <title></title>
+        
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        
+        <script>
+            $(document).ready(function()
+            {
+                $("#login-area").hide();
+                
+                
+                $("#login").click(function()
+                {
+                    $("#login-area").show();
+                    $("#login").hide();
+                });
+            });
+        </script>
     </head>
     <body>
         <?php
-        // put your code here
+            //unset($_SESSION);
+            //session_unset();
         ?>
 
         <div id="div-container">
@@ -33,7 +50,7 @@ and open the template in the editor.
                 </div>
 
                 <div id="balance-container" class="float-left white-font-style" >
-                    Balance and Login?
+                    <?php include '_loginDisplay.php'; ?>
                 </div>
 
                 <div class="clear"></div>
@@ -43,7 +60,7 @@ and open the template in the editor.
                 <div id="sidemenu" class="float-left">
                     <ul class="menu">
                         <li class="menu-item"><a href="#home">Home</a></li>
-                        <li class="menu-item"><a href="#news">News</a></li>
+                        <li class="menu-item"><a href="raffle.php">Raffle</a></li>
                         <li class="menu-item"><a href="#contact">Contact</a></li>
                         <li class="menu-item"><a href="#about">About</a></li>
                     </ul>
